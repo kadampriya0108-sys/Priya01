@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Priya Sanjay Kadam - PGDM student interested in Business Analytics and Management.">
+  <title>Priya Kadam | Professional Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #111c2e;
+      --text: #eef4fb;
+      --muted: #aab8ca;
+      --blue: #7dd3fc;
+      --mint: #a7f3d0;
+      --line: rgba(203, 220, 241, .15);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 85% 8%,
+        rgba(56,189,248,.13), transparent 28rem), var(--bg);
+      color: var(--text);
+      font: 16px/1.7 Arial, sans-serif;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 36px)); margin: auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #0b1220ee;
+      border-bottom: 1px solid var(--line);
+      z-index: 10;
+    }
+
+    nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    nav a { margin-right: 12px; }
+
+    .brand {
+      color: var(--text);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .hero { padding: 75px 0 45px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .pill {
+      color: var(--mint);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 7px 13px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 1.1;
+      margin: 25px 0 15px;
+    }
+
+    .gradient {
+      background: linear-gradient(100deg, var(--blue), var(--mint));
+      color: transparent;
+      background-clip: text;
+    }
+
+    .lead, .intro { color: var(--muted); font-size: 1.08rem; }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      margin: 8px 8px 0 0;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .primary {
+      color: #07111d;
+      background: linear-gradient(110deg, var(--blue), var(--mint));
+      font-weight: bold;
+    }
+
+    .profile, .card, .education, .timeline-item {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .avatar {
+      display: grid;
+      place-items: center;
+      width: 75px;
+      height: 75px;
+      border-radius: 20px;
+      color: #07111d;
+      background: linear-gradient(135deg, var(--blue), var(--mint));
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+
+    .muted { color: var(--muted); }
+
+    .stats, .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .stat {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--blue);
+      font-size: 1.2rem;
+    }
+
+    section.content { padding: 30px 0; }
+
+    .kicker {
+      color: var(--mint);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .8rem;
+      font-weight: bold;
+    }
+
+    .title { font-size: 2rem; margin-top: 5px; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .card h3 { margin-top: 0; }
+    .card p, .education p { color: var(--muted); }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 25px;
+      background: var(--panel);
+    }
+
+    .contact {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid, .cards { grid-template-columns: 1fr; }
+      nav { flex-wrap: wrap; padding: 12px 0; }
+      nav a { font-size: .9rem; }
+      .hero { padding-top: 45px; }
+    }
+
+    @media (max-width: 480px) {
+      .education-grid, .stats { grid-template-columns: 1fr; }
+      .title { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#home">PK | Priya Kadam</a>
+    <div>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero wrap" id="home">
+    <div class="hero-grid">
+      <div>
+        <span class="pill">PGDM Student · Pune, India</span>
+        <h1>Hi, I'm Priya.<br>
+          <span class="gradient">Business meets technology.</span>
+        </h1>
+        <p class="lead">
+          I am pursuing a PGDM at IMDR Pune after completing my
+          graduation in Computer Science at Fergusson College.
+          I am interested in Business Analytics and Management and
+          eager to develop practical skills and contribute to an organization.
+        </p>
+        <a class="btn primary" href="#experience">Explore My Experience ↗</a>
+        <a class="btn" href="#contact">Contact Me</a>
+      </div>
+
+      <aside class="profile">
+        <div class="avatar">PK</div>
+        <h2>Priya Sanjay Kadam</h2>
+        <p class="muted">PGDM · IMDR Pune</p>
+
+        <div class="stats">
+          <div class="stat"><strong>2026–28</strong>PGDM</div>
+          <div class="stat"><strong>75.68%</strong>Graduation</div>
+          <div class="stat"><strong>4</strong>Projects</div>
+          <div class="stat"><strong>3</strong>Languages</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="content wrap" id="about">
+    <p class="kicker">A little about me</p>
+    <h2 class="title">Motivated, curious, and ready to grow.</h2>
+    <p class="intro">
+      I am a motivated PGDM student interested in Business Analytics
+      and Management. I am a quick learner with communication,
+      teamwork, analytical thinking, time management, and adaptability
+      skills. I look forward to learning, growing, and contributing
+      to an organization.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Analytical Thinking</h3>
+        <p>I enjoy understanding problems and exploring practical solutions.</p>
+      </article>
+      <article class="card">
+        <h3>Business & Technology</h3>
+        <p>My Computer Science background complements my interest in business.</p>
+      </article>
+      <article class="card">
+        <h3>Teamwork</h3>
+        <p>I value communication, responsibility, and collaboration.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content wrap" id="education">
+    <p class="kicker">Academic Background</p>
+    <h2 class="title">Education</h2>
+
+    <div class="education-grid">
+      <article class="education">
+        <p>2026–2028 · Pursuing</p>
+        <h3>Post Graduate Diploma in Management</h3>
+        <p>Institute of Management Development and Research (IMDR), Pune</p>
+      </article>
+
+      <article class="education">
+        <p>2026</p>
+        <h3>Graduation · Computer Science</h3>
+        <p>Fergusson College, Pune · 75.68%</p>
+      </article>
+
+      <article class="education">
+        <p>2023</p>
+        <h3>Higher Secondary Certificate</h3>
+        <p>Sir Parshurambhau Mahavidyalaya, Pune · 52.00%</p>
+      </article>
+
+      <article class="education">
+        <p>2021</p>
+        <h3>Secondary School Certificate</h3>
+        <p>NMV Girls High School, Pune · 88.40%</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content wrap" id="experience">
+    <p class="kicker">Experience</p>
+    <h2 class="title">Campus Experience</h2>
+
+    <article class="timeline-item">
+      <p>2024</p>
+      <h3>Campus Ambassador — Reliance Digital</h3>
+      <ul>
+        <li>Promoted brand activities on campus.</li>
+        <li>Gained exposure to campus promotion and communication.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="content wrap" id="skills">
+    <p class="kicker">What I work with</p>
+    <h2 class="title">Skills</h2>
+
+    <div class="skill-list">
+      <span class="skill">MS Office</span>
+      <span class="skill">Basic MS Excel</span>
+      <span class="skill">MS PowerPoint</span>
+      <span class="skill">Basic Tally & Accounting</span>
+      <span class="skill">Basic Data Analysis</span>
+      <span class="skill">Business Analytics</span>
+      <span class="skill">Communication</span>
+      <span class="skill">Teamwork</span>
+      <span class="skill">Analytical Thinking</span>
+      <span class="skill">Time Management</span>
+      <span class="skill">Adaptability</span>
+    </div>
+  </section>
+
+  <section class="content wrap" id="projects">
+    <p class="kicker">Practical Work</p>
+    <h2 class="title">Projects</h2>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Shopping Website</h3>
+        <p><strong>Group Project</strong></p>
+        <p>Online store with product browsing and cart features.</p>
+      </article>
+
+      <article class="card">
+        <h3>NCC Enrollment Form</h3>
+        <p><strong>Group Project</strong></p>
+        <p>Digital system for student NCC registration.</p>
+      </article>
+
+      <article class="card">
+        <h3>City Event — Ticket Booking System</h3>
+        <p><strong>Individual Project</strong></p>
+        <p>Ticket booking with group watch coordination and a virtual queue
+          for sold-out shows.</p>
+      </article>
+
+      <article class="card">
+        <h3>Crypto Wallet Simulator</h3>
+        <p><strong>Group Project</strong></p>
+        <p>Send and receive crypto, QR scanner, portfolio, transaction history,
+          dark mode, live rates, and database functionality.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content wrap">
+    <div class="cards">
+      <article class="card">
+        <h3>Languages</h3>
+        <p>English · Hindi · Marathi</p>
+      </article>
+
+      <article class="card">
+        <h3>Personal Interests</h3>
+        <p>Learning new skills, business and technology, dancing and modelling,
+          and travelling.</p>
+      </article>
+
+      <article class="card">
+        <h3>Career Direction</h3>
+        <p>Developing business analytics, management, communication,
+          and practical problem-solving skills.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content wrap" id="contact">
+    <div class="contact">
+      <p class="kicker">Let's Connect</p>
+      <h2>Have an opportunity or idea?</h2>
+      <p class="muted">Connect with me through email.</p>
+      <a class="btn primary" href="mailto:kadampriya0108@gmail.com">Email Me</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span id="year"></span> Priya Sanjay Kadam · Pune, India
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
